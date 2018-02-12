@@ -1,0 +1,48 @@
+/*
+integers.cpp
+Jan 29, 2018
+EmersonScheffer
+*/
+
+
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{   
+    double numbers;
+    cout<<"type 5 numbers"<<endl;
+    cin>>numbers;
+
+    string sp = "   ";
+
+    
+    int spot1;
+
+    spot1 = numbers / 10000;
+
+    int spot2;
+
+    spot2 =  numbers / 1000 - spot1 * 10;
+
+    int spot3;
+
+    spot3 =  numbers / 100 - spot1 * 100 - spot2 * 10;
+
+    int spot4;
+
+    spot4 =  numbers / 10 - spot1 * 1000 - spot2 * 100 - spot3 * 10;
+
+    int spot5;
+
+    spot5 =  numbers / 1 - spot1 * 10000 - spot2 * 1000 - spot3 * 100 - spot4 * 10;
+
+
+
+    cout<<spot1<<sp<<spot2<<sp<<spot3<<sp<<spot4<<sp<<spot5<<endl;
+
+
+    return 0;
+}
