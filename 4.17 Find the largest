@@ -1,0 +1,36 @@
+//Write a C++ program that uses a while statement to determine
+//and print the largest number of 10 numbers input by the user.
+//Your program should use three variables, as follows:
+//counter:
+//number:
+//largest:
+
+/* Emerson Mar 18
+4.17 exercise from text book
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int counter = 1;
+    int number;
+    int largest;
+
+    cout << "\n";
+    cout << "Enter 10 integers" << endl;
+    while (counter <= 10){
+
+        cout << counter << " : ";
+        cin >> number;
+        ++counter;
+        if(number > largest){
+            largest = number;
+        }
+
+    }
+
+    cout << "\n";
+    cout << "The largest number is: " << largest << endl;
+}
