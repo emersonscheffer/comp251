@@ -1,0 +1,55 @@
+//Write a program that reads three nonzero double values and 
+//determines and prints whether they could represent the sides of a triangle.
+/*Emerson Mar18
+4.33 from text book
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+    double side1;
+    double side2;
+    double side3;
+
+    string answer;
+    do{
+        
+        cout << "\n";
+        cout << "Enter 3 sides of the triangle" << endl; 
+        cout << "Side 1: "; 
+        cin >> side1;
+        cout << "Side 2: "; 
+        cin >> side2;
+        cout << "Side 3: "; 
+        cin >> side3;
+
+        double sideA  = side1 + side2;
+        double sideB  = side3 + side2;
+        double sideC  = side1 + side3;
+
+        cout << "\n";
+
+        //nonzero values
+        if(side1 != 0 && side2 != 0 && side3 != 0){
+            //triangle logic
+            if (side3 < sideA && side2 < sideC && side1 < sideB){
+                cout << "it is a triangle" <<endl;
+                break;
+            } else {
+                cout << "Not a triangle" << endl;
+                cout << "Do you wanna try again, y/n? ";
+                cin >> answer;
+            }
+            
+        } else {
+            cout << "Not a triangle" << endl;
+            cout << "Do you wanna try again, y/n? ";
+            cin >> answer;
+        }
+
+        
+    } while(answer != "n");
+    
+
+    return 0;
+}
