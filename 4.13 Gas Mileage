@@ -1,0 +1,42 @@
+
+//Drivers are concerned with the mileage obtained by their automobiles.
+//One driver has kept track of several trips by recording miles driven 
+//and gallons used for each trip. Devel- op a C++ program that uses a 
+//while statement to input the miles driven and gallons used for each trip. 
+//The program should calculate and display the miles per gallon obtained for 
+//each trip and print the combined miles per gallon obtained for all tankfuls
+//up to this point.
+
+/* Emerson Mar 18
+Exercise 4.13 from text book
+*/
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+int main(){
+
+int miDriven;
+double gallons;
+double MPG;
+double tMPG;
+
+while(miDriven != -1) {
+    cout << "\n";
+    cout << "Enter miles driven (-1 to quit): "; 
+    cin >> miDriven;
+    
+    
+    if (miDriven != -1){
+        cout << "Enter gallons used: ";
+        cin >> gallons;
+        MPG = miDriven / gallons;
+        cout << "MPG this trip:  " <<fixed<<setprecision(6) << MPG << endl;
+        tMPG = tMPG + MPG;
+        cout << "Total MPG:  " <<fixed<<setprecision(6) << tMPG << endl;
+        cout << "\n";
+    }
+}
+
+}
