@@ -1,0 +1,57 @@
+//Write a program that reads three nonzero double values and 
+//determines and prints whether they could represent the sides of a triangle.
+/*Emerson Mar18
+4.33 from text book
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+    double side1;
+    double side2;
+    double side3;
+
+    double triangle;
+    string answer;
+    do{
+        
+        cout << "\n";
+        cout << "Enter 3 sides of the triangle in degrees" << endl; 
+        cout << "Side 1: "; 
+        cin >> side1;
+        
+        cout << "Side 2: "; 
+        cin >> side2;
+        cout << "Side 3: "; 
+        cin >> side3;
+
+        cout << "\n";
+        //nonzero values
+        if(side1 != 0 && side2 != 0 && side3 != 0){
+        
+            triangle = side1 + side2 + side3;
+            
+        } else {
+            triangle = 1;
+        }
+        
+
+    if (triangle == 180){
+        cout << "Yes, it is a triangle" << endl;
+        break;
+    } else {
+        cout << "Not a triangle Mate! :( " << endl; 
+        cout << "Adding up the sides you got: " << triangle << endl;
+        cout << "The sum of the three sides must be 180" << endl;
+        cout << "Do you wanna try again, y/n? ";
+        cin >> answer;
+        
+    }
+        
+
+        
+    } while(answer != "n" || triangle == 180);
+    
+
+    return 0;
+}
