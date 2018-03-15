@@ -1,0 +1,37 @@
+//Write a program that reads in a five-digit integer and
+//determines whether it’s a palindrome. [Hint: Use the 
+//division and modulus operators to separate the number
+//into its individual digits.]
+
+/*Emerson Mar 18
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num;
+    int a, b, c, d, e;
+
+    cout << "\n";
+    cout << "Enter 5 numbers: "; 
+    cin >> num;
+    cout << "\n";
+    a = num % 100000 / 10000;
+    b = num % 10000 / 1000;
+    c = num % 1000 / 100;
+    d = num % 100 / 10;
+    e = num % 10;
+
+    if(a == e && b == d && c >= b){
+        cout <<"Yes "<< num <<" is Palindrome !" << endl;
+        cout << "\n";
+    } else {
+        cout << "\n";
+        cout << num << ": is not a Palindrome" << endl;
+        cout << "\n";
+    }
+
+    return 0;
+}
