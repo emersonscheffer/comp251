@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    double e;
+    int z = 1;
+    int w; // number of summation
+    int a; // placeholder for the factorial
+    double b;
+    double c;
+    double d = 0;
+
+    do{
+        cout << "\n";
+        cout <<  "Enter the number of summation: ";
+        cin >> w;
+        a = w + 1;
+        if (w < 0){
+            cout << "\n";
+            cout << "Please Enter a positive integer";
+            cout << "\n";
+
+        } else {
+            while (z <= w){
+        
+            a = a - 1;
+
+            // calculate factorial 
+            int f = a;
+            int x = 0;
+            double b = 1; // new factorial value
+
+                while (x < f) {
+                x = (x + 1);
+
+                    if (x > 1){
+                    b = x * b;
+                    }   
+                
+                }
+            
+            c = 1/b;
+
+            d = d + c;
+            
+            z++;        
+
+            }
+
+            e = d + 1;
+
+        }
+
+    } while (w < 0);
+
+    cout << "The estimate of the constant e is: " << e << endl;
+
+    cout << "\n";
+
+    return 0;
+}
