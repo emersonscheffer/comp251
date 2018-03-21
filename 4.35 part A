@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int f;
+    int x = 0;
+    int y = 1;
+
+    do {
+        cout << "Enter an integer to know its factorial: ";
+        cin >> f;
+
+        if (f < 0) {
+            cout << "\n";
+            cout << "Enter a nonnegative integer please" << endl;
+        }
+
+        while (x < f) {
+            x = (x + 1);
+
+            if (x > 1){
+                y = x * y;
+            }
+                
+        }
+     } while (f < 0);
+
+    cout << "\n";
+    cout << "You entered " << f << endl;
+    cout << "\n";
+    cout << "The Factorial of " << f << " is " << y << endl;
+
+    return 0;
+}
