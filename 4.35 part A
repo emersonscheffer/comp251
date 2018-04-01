@@ -2,9 +2,9 @@
 using namespace std;
 
 int main(){
-    int f;
-    int x = 0;
-    int y = 1;
+    unsigned long long int f;
+    unsigned long long int x = 0;
+    unsigned long long int y = 1;
 
     do {
         cout << "Enter an integer to know its factorial: ";
