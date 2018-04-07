@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    int num;
+    cout << "Enter number of integers: ";
+    cin >> num;
+    int smallest;
+    int y;
+
+    int z = 2;
+
+    cout << "Enter " << num << " values" <<endl;
+    cout << "Value 1 : ";
+    cin >> y;
+
+    smallest = y;
+
+    for(int x = 1; x < num; x++){
+        cout << "Value " << z << " : ";
+        cin >> y;
+        if(y < smallest){
+            smallest = y;
+        }
+        z++;
+    }
+
+    cout << "The smallest value is: "<< smallest << endl;
+    return 0;
+}
